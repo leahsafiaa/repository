@@ -1,0 +1,128 @@
+body {
+        background-color:rgb(253, 221, 255)
+    }
+    ul {
+        margin: 0px;
+        padding: 10px;
+        border: 2px;
+        border-radius: 5px;
+        font-size: 26px;
+        overflow: hidden;
+        background-color: #f1b8ff;
+        color: #000000;
+        display: flex;
+        justify-content: center; 
+        gap: 20px; 
+    }
+
+    ul li {
+        float: left;
+        display: block;
+        padding: 14px 16px;
+        font-weight: bold;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    a:link {
+        color: rgb(118, 118, 233);
+        background-color: transparent;
+        text-decoration: none;
+
+    }
+    a:visited {
+        color: rgb(118, 118, 233);
+        background-color: transparent;
+    }
+
+    a:hover {
+        color: rgb(200, 106, 255);
+        background-color: transparent;
+    }
+
+    a:active {
+        color: rgb(200, 106, 255);
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    h1 {
+    color: rgb(118, 118, 233);
+    display: flex;
+    justify-content: center; 
+    font-family:Arial, Helvetica, sans-serif;
+    }
+
+    h2{
+    color: rgb(118, 118, 233);
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    }
+
+    h3 {
+    color: rgb(118, 118, 233);
+    margin: 20px;
+    display: flex;
+    justify-content: center; 
+    font-family:Arial, Helvetica, sans-serif;
+    }
+
+
+   div {
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(118, 118, 233);
+    margin: 20px;
+    display: flex;
+    justify-content: center; 
+   }
+
+   .name {
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(118, 118, 233);
+    margin: 20px;
+    display: flex;
+    justify-content: center; 
+   }
+
+   img{
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    }
+
+   .button {
+    display: inline-block;
+    color: rgb(118, 118, 233);
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #e4ebff;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 26px;
+    border: 2px solid #b7cafe;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+   } 
+
+   .button-container {
+    text-align: center;
+   }
+
+    video {
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+   }
+
+   input[type="text"] {
+    width: 250px;
+    padding: 12px;
+    border: 2px solid #9292ff;
+    border-radius: 10px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black;
+    outline: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
