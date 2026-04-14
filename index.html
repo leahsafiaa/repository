@@ -14,8 +14,9 @@
         <li><a href="home.html">Home</a></li>
         <li><a href="interests.html">Interests</a></li>
         <!-- sql -->
-    <!--  CREATE DATABASE produce_website;
-USE produce_website;
+    <!--  
+        CREATE DATABASE shop_db;
+USE shop_db;
 
 CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -23,7 +24,8 @@ CREATE TABLE users (
     last_name VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
-    role ENUM('customer', 'admin') NOT NULL DEFAULT 'customer'
+    role VARCHAR(20) NOT NULL DEFAULT 'customer',
+    loyalty_points INT NOT NULL DEFAULT 0
 );
 
 CREATE TABLE farms (
@@ -35,15 +37,13 @@ CREATE TABLE farms (
 
 CREATE TABLE products (
     product_id INT AUTO_INCREMENT PRIMARY KEY,
-    farm_id INT NOT NULL,
+    farm_name VARCHAR(100) NOT NULL,
     product_name VARCHAR(100) NOT NULL,
     description TEXT,
     stock_quantity INT NOT NULL DEFAULT 0,
     metric VARCHAR(20) NOT NULL,
     price DECIMAL(10,2) NOT NULL,
-    image VARCHAR(255),
-    is_active TINYINT(1) NOT NULL DEFAULT 1,
-    FOREIGN KEY (farm_id) REFERENCES farms(farm_id)
+    image VARCHAR(255)
 );
 
 CREATE TABLE orders (
@@ -51,7 +51,13 @@ CREATE TABLE orders (
     user_id INT NOT NULL,
     order_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     total_amount DECIMAL(10,2) NOT NULL,
-    status ENUM('Pending', 'Completed', 'Cancelled') NOT NULL DEFAULT 'Pending',
+    status VARCHAR(20) NOT NULL DEFAULT 'Pending',
+    delivery_type VARCHAR(50) NOT NULL,
+    payment_method VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone_number VARCHAR(20) NOT NULL,
+    address VARCHAR(150) NOT NULL,
+    postcode VARCHAR(20) NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
@@ -67,15 +73,14 @@ CREATE TABLE order_items (
 
 CREATE TABLE contact_messages (
     message_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NULL,
     full_name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     subject VARCHAR(150) NOT NULL,
     message_text TEXT NOT NULL,
     submitted_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    status ENUM('Unread', 'Read', 'Replied') NOT NULL DEFAULT 'Unread',
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
-);-->
+    status VARCHAR(20) NOT NULL DEFAULT 'Unread'
+);
+        -->
     </ul>
 
     <h1 style="color:rgb(118, 118, 233);">hellooo welcome to my website!</h1>
