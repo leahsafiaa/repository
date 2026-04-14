@@ -13,6 +13,69 @@
         <li><a href="index.html">Index</a></li>
         <li><a href="home.html">Home</a></li>
         <li><a href="interests.html">Interests</a></li>
+        <!-- sql -->
+    <!--  CREATE DATABASE produce_website;
+USE produce_website;
+
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('customer', 'admin') NOT NULL DEFAULT 'customer'
+);
+
+CREATE TABLE farms (
+    farm_id INT AUTO_INCREMENT PRIMARY KEY,
+    farm_name VARCHAR(100) NOT NULL,
+    description TEXT NOT NULL,
+    image VARCHAR(255)
+);
+
+CREATE TABLE products (
+    product_id INT AUTO_INCREMENT PRIMARY KEY,
+    farm_id INT NOT NULL,
+    product_name VARCHAR(100) NOT NULL,
+    description TEXT,
+    stock_quantity INT NOT NULL DEFAULT 0,
+    metric VARCHAR(20) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    image VARCHAR(255),
+    is_active TINYINT(1) NOT NULL DEFAULT 1,
+    FOREIGN KEY (farm_id) REFERENCES farms(farm_id)
+);
+
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    order_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    total_amount DECIMAL(10,2) NOT NULL,
+    status ENUM('Pending', 'Completed', 'Cancelled') NOT NULL DEFAULT 'Pending',
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+CREATE TABLE order_items (
+    order_item_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL,
+    subtotal DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),
+    FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
+
+CREATE TABLE contact_messages (
+    message_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NULL,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    subject VARCHAR(150) NOT NULL,
+    message_text TEXT NOT NULL,
+    submitted_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    status ENUM('Unread', 'Read', 'Replied') NOT NULL DEFAULT 'Unread',
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);-->
     </ul>
 
     <h1 style="color:rgb(118, 118, 233);">hellooo welcome to my website!</h1>
